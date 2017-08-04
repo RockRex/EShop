@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+	version="2.4">
+	<!-- ..........这是分割线..................... -->
+	<!-- 后台servlet -->
+	<servlet>
+		<servlet-name>AdminServlet</servlet-name>
+		<servlet-class>com.oracle.jsp.servlet.admin.AdminServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminServlet</servlet-name>
+		<url-pattern>/admin/adminServlet</url-pattern>
+	</servlet-mapping>
+	<!-- 商品分类servlet -->
+	<servlet>
+		<servlet-name>ProductTypeServlet</servlet-name>
+		<servlet-class>com.oracle.jsp.servlet.admin.ProductTypeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ProductTypeServlet</servlet-name>
+		<url-pattern>/admin/product/type/productTypeServlet</url-pattern>
+	</servlet-mapping>
+	<!-- 商品属性 -->
+	<servlet>
+		<servlet-name>ProductPropertyServlet</servlet-name>
+		<servlet-class>com.oracle.jsp.servlet.admin.ProductPropertyServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ProductPropertyServlet</servlet-name>
+		<url-pattern>/admin/product/property/productPropertyServlet</url-pattern>
+	</servlet-mapping>
+	<!-- 商品属性选项 -->
+	<servlet>
+		<servlet-name>ProductOptionServlet</servlet-name>
+		<servlet-class>com.oracle.jsp.servlet.admin.ProductOptionServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ProductOptionServlet</servlet-name>
+		<url-pattern>/admin/product/option/productOptionServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- ..........这是分割线.............................. -->
+	<welcome-file-list>
+		<welcome-file>login.jsp</welcome-file>
+		<welcome-file>admin/login.jsp</welcome-file>
+		<welcome-file>index3.jsp</welcome-file>
+		<welcome-file>index4.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
